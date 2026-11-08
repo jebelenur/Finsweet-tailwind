@@ -12,9 +12,9 @@ import Input from '../ui/Input'
 const Footer = () => {
   return (
     <>
-        <footer className='bg-footerbg py-16'>
+        <footer className='bg-footerbg py-16 px-4'>
             <Container>
-                <div className='flex'>
+                <div className='flex flex-col lg:flex-row justify-between gap-12 lg:gap-0'>
                     <div className='flex flex-col gap-8'>
                         <div className='flex flex-col gap-4'>
                             <Anchor href="/" className=''>
@@ -36,7 +36,7 @@ const Footer = () => {
                             </Span>
                         </div>
                     </div>
-                    <div className='flex gap-18 mr-[115px] ml-[200px]'>
+                    <div className='flex gap-18 xl:mr-[115px] xl:ml-[200px]'>
                         <div className='flex flex-col gap-5'>
                             <Span className='text-white font-normal text-base flex flex-col capitalize font-robotoCon'>
                                 Quicklinks
@@ -70,10 +70,10 @@ const Footer = () => {
                         </div>
                     </div>
                     <div>
-                        <h3 className='max-w-[377px] text-white uppercase font-robotoCon text-[32px] font-bold mb-8'>Subscribe to get Latest Updates and News</h3>
-                        <div className="relative flex items-center w-[512px] h-16 rounded-xl border border-white/15 bg-transparent">
-                            <Input className="w-full bg-transparent px-6 border-none text-white/80 font-robotoCon text-base font-normal focus:outline-none" placeholder="Youremail.com"/>
-                            <button className="px-16 py-6 bg-primary text-[#1C1D28] font-robotoCon text-base font-medium uppercase transition-all rounded-xl">
+                        <h3 className='max-w-[377px] text-white uppercase font-robotoCon text-2xl sm:text-[32px] font-bold mb-8'>Subscribe to get Latest Updates and News</h3>
+                        <div className="relative flex items-center w-full max-w-[512px] h-16 rounded-xl border border-white/15 bg-transparent">
+                            <Input className="w-full bg-transparent px-4 sm:px-6 border-none text-white/80 font-robotoCon text-base font-normal focus:outline-none" placeholder="Youremail.com"/>
+                            <button className="h-full px-6 sm:px-12 lg:px-16 bg-primary text-[#1C1D28] font-robotoCon text-base font-medium uppercase transition-all rounded-xl flex items-center justify-center whitespace-nowrap">
                                 Subscribe
                             </button>
                         </div>
