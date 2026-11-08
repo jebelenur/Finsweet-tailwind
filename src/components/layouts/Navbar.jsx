@@ -15,7 +15,7 @@ const Navbar = () => {
             <Container>
                 <div className='flex justify-between items-center'>
                     <div className='flex items-center gap-32'>
-                        <Anchor href="/" className="relative after:absolute after:content-[''] after:w-0.5 after:bg-white/10 after:h-50 after:-right-16 after:-bottom-20 ">
+                        <Anchor href="/" className="relative after:absolute after:content-[''] after:w-0.5 after:bg-white/10 after:h-20 after:-right-16 after:-bottom-6 ">
                             <Images src={logo} alt="not found"/>
                         </Anchor>
                         <ul className='hidden lg:flex items-center gap-12'>
