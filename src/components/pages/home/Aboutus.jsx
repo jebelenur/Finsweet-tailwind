@@ -11,15 +11,15 @@ const Aboutus = () => {
     <>
       <Container>
         <div>
-          <div className='mt-32 flex flex-col text-center justify-center'>
+          <div className='mt-16 lg:mt-32 flex flex-col text-center justify-center'>
             <Subheading className='uppercase pb-4'>
-              Sub-Hedline
+              Sub-Headline
             </Subheading>
             <Headings>
               a church that's relevant
             </Headings>
           </div>
-          <div className='mt-16 mb-32 flex gap-6'>
+          <div className='mt-10 mb-16 lg:mt-16 lg:mb-32 flex flex-col lg:flex-row items-center gap-6'>
             <Cards
               logo={<Images src={prayericon} alt="not found"/>}
               title="ABOUT US"
