@@ -8,6 +8,7 @@ import { FaFacebook } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import Input from '../ui/Input'
+import Button from '../common/Button'
 
 const Footer = () => {
   return (
@@ -73,9 +74,9 @@ const Footer = () => {
                         <h3 className='max-w-[377px] text-white uppercase font-robotoCon text-2xl sm:text-[32px] font-bold mb-8'>Subscribe to get Latest Updates and News</h3>
                         <div className="relative flex items-center w-full max-w-[512px] h-16 rounded-xl border border-white/15 bg-transparent">
                             <Input className="w-full bg-transparent px-4 sm:px-6 border-none text-white/80 font-robotoCon text-base font-normal focus:outline-none" placeholder="Youremail.com"/>
-                            <button className="h-full px-6 sm:px-12 lg:px-16 bg-primary text-[#1C1D28] font-robotoCon text-base font-medium uppercase transition-all rounded-xl flex items-center justify-center whitespace-nowrap">
+                            <Button className="h-full px-6 sm:px-12 lg:px-16 text-base font-medium flex items-center justify-center whitespace-nowrap">
                                 Subscribe
-                            </button>
+                            </Button>
                         </div>
                     </div>
                 </div>

@@ -5,6 +5,7 @@ import Anchor from '../ui/Anchor'
 import Images from '../ui/Images'
 import { menuData } from '../../dummydata/menudata'
 import { FaBars, FaXmark } from "react-icons/fa6";
+import Button from '../common/Button'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,9 +30,9 @@ const Navbar = () => {
                                 ))}
                         </ul>
                     </div>
-                    <div>
-                        <button className='hidden lg:block bg-primary px-12 py-5 uppercase font-normal text-base text-[#1C1D28] rounded-xl font-robotoCon'>Contact Us</button>
-                    </div>
+                    <Button className="hidden lg:block text-base">
+                        Contact Us
+                    </Button>
                     <FaBars 
                         onClick={() => setIsOpen(true)} 
                         className='text-white text-2xl cursor-pointer lg:hidden'
