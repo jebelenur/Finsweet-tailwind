@@ -1,12 +1,31 @@
-import React from 'react'
+import React, { useRef, useEffect } from 'react'
 import Container from '../../common/Container'
 import Subheading from '../../common/Subheading'
 import Headings from '../../common/Headings'
 import Cards from '../../common/Cards'
 import Images from '../../ui/Images'
 import prayericon from '../../../assets/prayericon.png'
+import { cardData } from '../../../dummydata/aboutusdata'
 
 const Aboutus = () => {
+  const scrollRef = useRef(null)
+
+  useEffect(() => {
+    const el = scrollRef.current
+    if (!el) return
+
+    const handleScroll = () => {
+      if (el.scrollLeft >= el.scrollWidth / 2) {
+        el.scrollLeft = 0
+      }
+    }
+
+    el.addEventListener('scroll', handleScroll)
+    return () => el.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  const loopedCards = [...cardData, ...cardData]
+
   return (
     <>
       <Container>
@@ -19,22 +38,19 @@ const Aboutus = () => {
               a church that's relevant
             </Headings>
           </div>
-          <div className='mt-10 mb-16 lg:mt-16 lg:mb-32 flex flex-col lg:flex-row items-center gap-6'>
-            <Cards
-              logo={<Images src={prayericon} alt="not found"/>}
-              title="ABOUT US"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            />
-            <Cards
-              logo={<Images src={prayericon} alt="not found"/>}
-              title="ABOUT US"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            />
-            <Cards
-              logo={<Images src={prayericon} alt="not found"/>}
-              title="ABOUT US"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            />
+          <div
+            ref={scrollRef}
+            className='mt-10 mb-16 lg:mt-16 lg:mb-32 flex gap-6 overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]'
+          >
+            {loopedCards.map((item, index) => (
+              <Cards
+                key={index}
+                className='shrink-0'
+                logo={<Images src={prayericon} alt="not found"/>}
+                title={item.title}
+                description={item.description}
+              />
+            ))}
           </div>
         </div>
       </Container>
