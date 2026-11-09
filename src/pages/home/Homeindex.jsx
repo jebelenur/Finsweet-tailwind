@@ -4,7 +4,7 @@ import Banner from '../../components/pages/home/Banner'
 import Footer from '../../components/layouts/Footer'
 import Aboutus from '../../components/pages/home/Aboutus'
 import Benefits from '../../components/pages/home/Benefits'
-import Colleagedisplay from '../../components/pages/home/Colleagedisplay'
+import Collagedisplay from '../../components/pages/home/Collagedisplay'
 
 const Homeindex = () => {
   return (
@@ -12,7 +12,7 @@ const Homeindex = () => {
         <Navbar/>
         <Banner/>
         <Aboutus/>
-        <Colleagedisplay/>
+        <Collagedisplay/>
         <Benefits/>
 
         <Footer/>
