@@ -6,9 +6,12 @@ import Images from '../ui/Images'
 import { menuData } from '../../dummydata/menudata'
 import { FaBars, FaXmark } from "react-icons/fa6";
 import Button from '../common/Button'
+import { NavLink, useLocation } from 'react-router-dom'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = useLocation()
+  console.log(pathname)
 
   return (
     <>
@@ -23,9 +26,9 @@ const Navbar = () => {
                             {
                                 menuData.map((item, index)=>(
                                     <li key={index}>
-                                        <Anchor href={item.url} className="font-normal font-robotoCon text-based uppercase text-white">
+                                        <NavLink to={item.url} className={`font-normal font-robotoCon text-based uppercase ${item.url === pathname.pathname ? "text-red-500" : "text-white"}`}>
                                             {item.label}
-                                        </Anchor>
+                                        </NavLink>
                                     </li>
                                 ))}
                         </ul>

@@ -9,13 +9,11 @@ import Collagedisplay from '../../components/pages/home/Collagedisplay'
 const Homeindex = () => {
   return (
     <>
-        <Navbar/>
         <Banner/>
         <Aboutus/>
         <Collagedisplay/>
         <Benefits/>
 
-        <Footer/>
     </>
   )
 }
